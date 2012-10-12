@@ -146,8 +146,7 @@ FRAMEWORK_NAME    = 'boost'
 FRAMEWORK_VERSION = 'A'
 FRAMEWORK_CURRENT_VERSION = BOOST_VERSION
 
-framework_dir = Pathname.new 'build/framework'
-framework_bundle = framework_dir + "#{FRAMEWORK_NAME}.framework"
+framework_bundle = Pathname.new('build') + "#{FRAMEWORK_NAME}.framework"
 mkdir_p framework_bundle
 mkdir_p framework_bundle + 'Versions'
 mkdir_p framework_bundle + 'Versions' + FRAMEWORK_VERSION
