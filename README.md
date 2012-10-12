@@ -8,6 +8,23 @@ Because your iPhone doesn't get enough c++.
 
 ## How?
 
+### The blue pill
+Prerequisites:
+
+- [Subversion](http://subversion.tigris.org)
+
+Sync 'n build:
+
+```sh
+$ ./boost-jam.rb
+```
+
+(For more options, such as setting which SDK or libraries you want), see --help.
+
+You should now have a framework in `./boost.framework`.  Drag'n'drop to Xcode and get compiling!
+
+### The red pill
+
 Prerequisites:
 
 - [Git](http://git-scm.com)
@@ -32,7 +49,7 @@ Now would be a good time to check `./boost-zero` and see if you want to check ou
 Configure the script. You want to make sure the boost version matches the source, and the sdk version matches your sdk.
 
 ```ruby
-$ editor boost.rb
+$ editor boost-cmake.rb
 BOOST_VERSION=1_51_0
 IPHONEOS_SDK_VERSION='6.0'
 IPHONEOS_DEPLOYMENT_TARGET='5.1'
@@ -70,13 +87,14 @@ $ ruby -i~ -p -e '$_ = nil if /boost\/(graph_parallel|mpi|python)/ === $_' boost
 
 Go!
 ```sh
-$ ./boost.rb
+$ ./boost-cmake.rb
 ```
 
-You should now have a framework in `./build/boost.framework`.  Drag'n'drop to Xcode and get compiling!
+You should now have a framework in `./boost.framework`.  Drag'n'drop to Xcode and get compiling!
 
 ## References, inspirations, etc.
 
 - http://code.google.com/p/ios-cmake/
 - http://gitorious.org/boostoniphone/boostoniphone
 - http://www.cmake.org/Wiki/CMake_Cross_Compiling
+- https://gitorious.org/~galbraithjoseph/boostoniphone/galbraithjosephs-boostoniphone

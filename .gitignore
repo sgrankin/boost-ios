@@ -1,1 +1,5 @@
 /build
+/install
+/stage
+/boost.framework
+/src
