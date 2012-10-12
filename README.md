@@ -42,10 +42,10 @@ DEVELOPER_DIR='/Applications/Xcode.app/Contents/Developer'
 Fix the boost sources:
 
 ```sh
-> rm -r boost-zero/boost/graph_parallel
-> rm -r boost-zero/boost/mpi
-> rm -r boost-zero/boost/python
-> ruby -i~ -p -e '$_ = nil if /boost\/(graph_parallel|mpi|python)/ === $_' boost-zero/CMakeLists.txt
+$ rm -r boost-zero/boost/graph_parallel
+$ rm -r boost-zero/boost/mpi
+$ rm -r boost-zero/boost/python
+$ ruby -i~ -p -e '$_ = nil if /boost\/(graph_parallel|mpi|python)/ === $_' boost-zero/CMakeLists.txt
 ```
 
 ```diff
@@ -70,7 +70,7 @@ Fix the boost sources:
 
 Go!
 ```sh
-> ./boost.rb
+$ ./boost.rb
 ```
 
 You should now have a framework in `./build/boost.framework`.  Drag'n'drop to Xcode and get compiling!
