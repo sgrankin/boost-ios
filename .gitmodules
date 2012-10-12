@@ -1,0 +1,3 @@
+[submodule "boost-zero"]
+	path = boost-zero
+	url = https://github.com/ryppl/boost-zero.git
